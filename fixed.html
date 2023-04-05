@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        img {
+            max-width: 100%;
+
+        }
+
+        .fixed {
+            position: fixed;
+            width: 20%;
+            height: 100vh;
+            background-color: hsl(212.73deg 6.83% 31.57%);
+        }
+
+        .main {
+            margin-left: 20%;
+            width: 80%;
+        }
+
+        .row>div:first-child img {
+            margin: 50px 0px;
+        }
+
+        .row>div:nth-child(2) a {
+            background-color: hsl(206.67deg 7.32% 24.12%);
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            display: block;
+            padding: 20px;
+            margin-bottom: 1px;
+        }
+        .row>div a:hover{
+            color: rgb(68, 73, 215);
+        }
+        .row>div>a:first-child {
+            border-left: 5px solid hsl(199.3deg 74.03% 54.71%);
+        }
+
+        .row>div>a:nth-child(2) {
+            border-left: 5px solid hsl(40.12deg 78.74% 59.41%);
+        }
+
+        .row>div>a:nth-child(3) {
+            border-left: 5px solid hsl(268.3deg 79.9% 60.98%);
+        }
+
+        .row>div>a:nth-child(4) {
+            border-left: 5px solid hsl(151.24deg 75.11% 55.88%);
+        }
+
+        .row>div>a:last-child {
+            border-left: 5px solid hsl(336.87deg 73.45% 55.69%);
+        }
+
+        .row1 {
+            background-image: url(img/main.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 450px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .r1 {
+            color: white;
+            text-align: center;
+        }
+        .r1 p{
+            font-size: large;
+            line-height: 1.5;
+            text-align: center;
+            color: hsl(55.38deg 52% 95.1%)
+        }
+        .r1 button{
+            background-color: hsl(199.3deg 74.03% 54.71%);
+            border: 0;
+            color: white;
+            padding: 10px 20px;
+            border-bottom: 3px solid hsl(203.17deg 77.54% 36.67%);
+        }
+        .input{
+            position: absolute;
+            margin-top: 300px
+        }
+        .box{
+            margin: auto;
+            width: 80%;
+            text-align: center;
+        }
+        .wel h2{
+            color:hsl(196.46deg 85.37% 59.8%);
+            font-weight: 100;
+        }
+        span{
+           color: hsl(196.46deg 85.37% 59.8%)
+        }
+        .wel p{
+            color: hsl(0deg 0.83% 47.06%);
+            font-size: small;
+            margin: 0;
+        }
+        .border{
+            width: 100%;
+            height: 3px;
+            background-color: hsl(39.64deg 78.95% 59.02%);
+            margin: 60px 0px;
+            text-align: left;
+        }
+        .border button{
+            border:0;
+            background-color: hsl(39.64deg 78.95% 59.02%);
+            color: white;
+            padding: 15px 20px;
+        }
+        .pic3, .col2, .col4{
+            display: grid;
+            grid-template-columns: 31% 31% 31%;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            row-gap: 20px;
+        }
+        .pic3 h3, .col h2{
+            color:hsl(39.64deg 78.95% 59.02%);
+            font-weight: 100;
+            margin: 10px 0px;
+            
+        }
+        .pic3 p{
+            font-size: medium;
+            color: hsl(0deg 0.83% 47.06%);
+            margin: 0;
+
+        }
+        .team
+        {
+            display: grid;
+            grid-template-columns: 70% 25%;
+            justify-content: space-between;
+            text-align: left;
+            margin-bottom: 50px;
+        }
+        .col{
+            grid-column: span 2;
+        }
+        .col1 p,.col3 p{
+            font-size: small;
+            color: hsl(0deg 0.83% 47.06%);
+            line-height: 1.5;
+        }
+        .border1{
+            width: 100%;
+            height: 3px;
+            background-color: hsl(269.41deg 75.37% 60.2%);
+            margin: 60px 0px;
+            text-align: left;
+        }
+        .border1 button{
+            border:0;
+            background-color: hsl(269.41deg 75.37% 60.2%);
+            color: white;
+            padding: 15px 20px;
+        }
+        .col2>div{
+            background-color: hsl(269.41deg 75.37% 60.2%);
+            display: grid;
+            grid-template-columns: 30% 70%;
+            align-items: center;
+            color: white;
+            padding: 15px 20px;
+        }
+        .col3{
+            display: grid;
+            grid-template-columns: 65% 30%;
+            justify-content: space-between;
+            text-align: left;
+        }
+        .col3 h2{
+            color:hsl(269.41deg 75.37% 60.2%);
+            font-weight: 100;
+            margin: 10px 0px;
+        }
+        .bar{
+            display: grid;
+            grid-template-rows: 25px 25px 25px 25px;
+            row-gap: 10px;
+            height: 100px;
+            align-items: center;
+            color: white;
+           
+            
+        }
+        .bar>div{
+            text-align: center;
+            box-shadow: 0 0 5px 2px #c7c5c5;
+            width: 100%;
+            background-color: #f2f2f2;
+        }
+        .bar>div:first-child>div{
+            width:90%;
+            text-align: center;
+            background-color:hsl(269.41deg 75.37% 60.2%) ;
+        }
+        .bar>div:nth-child(2)>div{
+            width:75%;
+            text-align: center;
+            background-color:hsl(269.41deg 75.37% 60.2%) ;
+        }
+        .bar>div:nth-child(3)>div{
+            width:66%;
+            text-align: center;
+            background-color:hsl(269.41deg 75.37% 60.2%) ;  
+        }
+        .bar>div:last-child>div{
+            width:88%;
+            text-align: center;
+            background-color:hsl(269.41deg 75.37% 60.2%) ;
+        }
+        .border2{
+            width: 100%;
+            height: 3px;
+            background-color: hsl(152.47deg 74.56% 55.29%);
+            margin: 60px 0px;
+            text-align: left;
+        }
+        .border2 button{
+            border:0;
+            background-color: hsl(152.47deg 74.56% 55.29%);
+            color: white;
+            padding: 15px 20px;
+        }
+        .col4 h3{
+            color: hsl(152.47deg 74.56% 55.29%);
+            font-weight: 100;
+        }
+        .but{
+            margin-bottom: 50px;
+        }
+        .but button{
+            background-color: hsl(152.47deg 74.56% 55.29%);
+            color:white;
+            padding: 15px 20px;
+            border: 0;
+            border-bottom: 3px solid hsl(152.73deg 72.53% 35.69%);
+        }
+        .border3{
+            width: 100%;
+            height: 3px;
+            background-color: hsl(335.5deg 73.8% 55.1%);
+            margin: 60px 0px;
+            text-align: left;
+        }
+        .border3 button{
+            border:0;
+            background-color: hsl(335.5deg 73.8% 55.1%);
+            color: white;
+            padding: 15px 20px;
+        }
+        .map{
+            margin-bottom: 20px;
+            border: solid rgb(209, 209, 209) 5px;
+        }
+        .form{
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .form h4, .cs h4{
+            text-align: left;
+            font-weight: 100;
+            color:hsl(0deg 0.83% 47.06%);
+        }
+        
+        .form input{
+            padding: 10px 25px;
+            border: 1;
+            width:100%;
+        }
+        textarea{
+            width: 100%;
+        }
+        .but1{
+            margin-bottom: 50px;
+            text-align: left;
+        }
+        .but1 button{
+            background-color: hsl(335.5deg 73.8% 55.1%);
+            color:white;
+            padding: 15px 20px;
+            border:0;
+            border-bottom: 3px solid hsl(336.64deg 74.01% 34.71%);
+        }
+        .footer{
+            background-color: hsl(212.73deg 6.83% 31.57%);
+            padding: 50px 0px;
+            margin-left: 1px;
+        }
+        .width{
+            width: 30%;
+            margin: auto;
+        }
+        .five{
+            display: grid;
+            grid-template-columns: 19% 19% 19% 19% 19%;
+            justify-content: space-between;
+        }
+        .five>div{
+            background-color: hsl(206.67deg 7.32% 24.12%);
+            padding: 10px 15px;
+        }
+        
+        footer{
+            background-color: hsl(206.67deg 7.32% 24.12%);
+            padding: 20px 0px;
+            color: gray;
+            margin-left: 1px;
+        }
+        footer span{
+            color:white
+        }
+        @media all and (max-width: 576px){
+            .row>div:nth-child(2) a {
+                font-size: small;
+            }
+            .pic3, .col2,.col3, .col4{
+                grid-template-columns: 100%;
+            }
+            .width{
+                width:50%
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fixed">
+        <div class="row">
+            <div>
+                <img src="img/logo.webp" alt="">
+            </div>
+            <div>
+                <a href="#home">HOME</a>
+                <a href="#aboutus">ABOUT US</a>
+                <a href="#service">SERVICE</a>
+                <a href="#portfolio">PORTFOLIO</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="row1">
+            
+            <div class="r1">
+                <H1>RESPONSIVE LAYOUT</H1>
+                <p>PELLENTESQUE HABITANT MORBI TRISTIQUE SENECTUS ET NETUS ET MALESUADA FAMES</p>
+                <button>READ MORE</button>
+            </div>
+            <div class="input">
+                <input type="radio" aria-label="radio" checked>
+                <input type="radio" aria-label="radio">
+                <input type="radio" aria-label="radio">
+            </div>
+        </div>   
+        <div class="box">
+            <div class="wel">
+                <h2>WELCOME TO TEMPLATE</h2>
+                <p>Maecenas adipiscing pellentesque elit eu volutpat. integar vitae <span>pullvinar magna.</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, eius aspernatur? Laborum tenetur voluptatibus hic sit rerum, mollitia assumenda sequi unde et magnam exercitationem maxime obcaecati qui earum quasi illum.</p>
+            </div>
+            <div class="border">
+                <button id="aboutus">ABOUT US</button>
+            </div>
+            <div class="pic3">
+                <div>
+                    <img src="img/r1.webp" alt=""></img>
+                    <h3>CHRISTINA WELLDONE</h3>
+                    <p>Marketing Director</p>
+                
+                </div>
+                <div><img src="img/r2.webp" alt=""></img>
+                    <h3>TERI BELLE</h3>
+                    <p>Creative Executive</p></div>
+                <div><img src="img/r3.webp" alt="">
+                    <h3>TAWANA CHERRY</h3>
+                    <p>Company President</p></img></div>
+            </div>
+            <div class="team">
+                <div class="col"><h2>OUR MANAGEMENT TEAM</h2></div>
+                <div class="col1">
+                    <p>This is a mobile website template which can be viewed in mobile devices. Quisque in metus tristique, gravida dolor ut, varius neque. Maecenas ac risus aliquam, facilisis massa id, vulputate elit. Curabitur pretium arcu dictum, faucibus diam quis, commodo turpis. Proin viverra, risus eget egestasa sodales, fells ante scelerisque ligula, eu tellus.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum optio rerum, placeat dolorum recusandae eligendi laudantium laborum quasi. Libero id incidunt vel cupiditate culpa earum dolore minima iusto sapiente repellat. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis vero consequatur temporibus corporis itaque quo tempore, hic quod. Velit, at! Harum ut doloremque hic rem nisi impedit consectetur quibusdam. Laudantium!</p>
+                </div>
+                <div>
+                    <img src="img/screen.webp" alt=""></img>
+                </div>
+            </div>
+            <div class="border1">
+                <button id="service">SERVICE</button>
+            </div>
+            <div class="col2">
+                <div>
+                    <div><i class="fa-sharp fa-solid fa-bolt-lightning"></i></div>
+                    <div>The Best Support Ever</div>
+                </div>
+                <div>
+                    <div><i class="fa-solid fa-laptop"></i></div>
+                    <div>Fully Responsive Design</div>
+                </div>
+                <div>
+                    <div><i class="fa-solid fa-pencil "></i>
+                    </div>
+                    <div>
+                        Unlimited Layouts Options
+                    </div>
+                </div>
+            </div>
+            <div class="col3">
+                <div>
+                    <h2>OUR SKILLS</h2>
+                    <p>Integer hendrerit erat sed tellus pretium,eu sodales eros dignissm. Duis augue eros, mollis ac velit at, rutum tincidunt ipsum. Morbi semper dul id fringilla semper. Etiam vulputate sagittis vestibulum. Vivamus ac ante cursus, feugiat ipsum et, aliquet justo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, quibusdam modi. Architecto mollitia deserunt esse perferendis! Voluptates ad corrupti, debitis laboriosam, repellat officiis id recusandae cumque totam vitae quas beatae.</p>
+                </div>
+                <div class="bar">
+                    <div>
+                        <div>GRAPHICS 90%</div>
+                    </div>
+                    <div>
+                        <div>HTML CSS3 75%</div>
+                    </div>
+                    <div>
+                        <div>WORDPRESS 66%</div>
+                    </div>
+                    <div>
+                        <div>MARKETING 88%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="border2">
+                <button id="portfolio">PORTFOLIO</button>
+            </div>
+            <div class="col4">
+                <div> <img src="img/fan.webp" alt=""> <h3>FANTASY</h3></div>
+                <div> <img src="img/bot.webp" alt=""> <h3>BOTANY</h3> </div>
+                <div> <img src="img/ni.webp" alt=""> <h3>UNIVERSE</h3> </div>
+                <div> <img src="img/cha.webp" alt=""> <h3>CHANNEL</h3> </div>
+                <div> <img src="img/dra.webp" alt=""> <h3>DRAGONFLY</h3> </div>
+                <div> <img src="img/tit.webp" alt=""><h3>TITANIUM</h3> </div>
+
+            </div>
+            <div class="but">
+                <button>LOAD MORE</button>
+            </div>
+            <div class="border3">
+                <button id="contact">CONTACT</button>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497511.231048111!2d79.87932320159771!3d13.047985951932422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1680603129152!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                
+            </div>
+            <div class="form">
+                <div>
+                    <h4>Name*</h4>
+                    <input type="text"  aria-label="text">
+                </div>
+                <div>
+                    <h4>E-Mail*</h4>
+                    <input type="mail" aria-label="text">
+                </div>
+                <div>
+                    <h4>Subject</h4>
+                    <input type="text" aria-label="text">
+                </div>
+            </div>
+            <div class="cs">
+                <h4>Message*</h4>
+                <textarea name="text" id="" cols="30" rows="5"></textarea>
+            </div>
+           
+            <div class="but1">
+                <button>SEND MESSAGE</button>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="width">
+                <div class="five">
+                    <div><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></div>
+                    <div><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></div>
+                    <div><i class="fa-brands fa-google" style="color: #ffffff;"></i></div>
+                    <div><i class="fa-brands fa-linkedin-in" style="color: #ffffff;"></i></div>
+                    <div><i class="fa-solid fa-wifi" style="color: #ffffff;"></i></div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="box">
+                <div style="text-align: left;">
+                    Copyright &#169; 2015 <span> Flomic </span>
+                </div>
+            </div>
+        </footer>
+    </div><script src="https://kit.fontawesome.com/8d92229b07.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
