@@ -21,7 +21,7 @@
 
         }
 
-        .fixed {
+        .row {
             position: fixed;
             width: 20%;
             height: 100vh;
@@ -80,6 +80,27 @@
             flex-wrap: nowrap;
             justify-content: center;
             align-items: center;
+        }
+
+        .fixed [for=open],
+        .fixed [for=exit] {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+            display: none;
+        }
+
+        [for=exit] {
+            display: none;
+        }
+
+        .fixed input{
+            display: none;
+        }
+        #open:checked~.row,
+        #open:checked~[for=exit] {
+            display: block;
         }
 
         .r1 {
@@ -389,6 +410,16 @@
         }
 
         @media all and (max-width: 576px) {
+            .row {
+                display: none;
+
+            }
+
+            .main {
+                width: 100%;
+                margin: 0;
+            }
+
             .row>div:nth-child(2) a {
                 font-size: small;
             }
@@ -400,6 +431,17 @@
                 grid-template-columns: 100%;
             }
 
+            .fixed [for=open],
+            .fixed [for=exit] {
+                display: block;
+            }
+            .fixed [for=exit]{
+                display: none;
+            }
+            #open:checked~[for=open] {
+            display: none;
+        }
+
             .width {
                 width: 50%
             }
@@ -409,6 +451,14 @@
 
 <body>
     <div class="fixed">
+        <input type="radio" id="open" name="v1">
+        <input type="radio" id="exit" name="v1">
+        <label for="open">
+            &#x2630
+        </label>
+        <label for="exit">
+            <i class="fa-solid fa-x"></i>
+        </label>
         <div class="row">
             <div>
                 <img src="img/logo.webp" alt="">
@@ -424,7 +474,6 @@
     </div>
     <div class="main">
         <div class="row1">
-
             <div class="r1">
                 <H1>RESPONSIVE LAYOUT</H1>
                 <p>PELLENTESQUE HABITANT MORBI TRISTIQUE SENECTUS ET NETUS ET MALESUADA FAMES</p>
